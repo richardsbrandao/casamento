@@ -15,3 +15,5 @@ rek/db/*.sqlite3-journal
 rek/log/*
 rek/!/log/.keep
 rek/tmp
+
+rek/.idea
