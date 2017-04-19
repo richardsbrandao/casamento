@@ -1,10 +1,13 @@
 #!/bin/bash
 
+PORT=$1
+
 while true; do
-    if ! sudo fuser -v 80/tcp
-    then
-        rails s -b 0.0.0.0 -p 80 > log/production.log
+    STATUS_CODE=`curl -sL -w "%{http_code}\\n" "http://localhost:$PORT" -o /dev/null`
+
+    if [ $STATUS_CODE -ne 200 ]; then
+         SECRET_KEY_BASE=$(rake secret) rails s Puma -e production -b 0.0.0.0 -p $PORT > /dev/null
     fi
 
-    sleep 2
+    sleep 20
 done

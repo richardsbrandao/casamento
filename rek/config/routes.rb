@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'home' => 'home#home'
+  get 'service_check' => 'service_check#check'
   root 'home#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
