@@ -135,7 +135,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+        font-size: 1.8em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
@@ -473,5 +473,16 @@ footer .footer-below {
     font-size:1.5em;
     width: 25%;
 }
+
+
+.save-the-date {
+    position: absolute;
+    top:0px;
+    left:5px;
+    font-size:1.5em;
+    width: 25%;
+}
+
+.save-the-date img { width:100%; max-width: 150px; max-height: 40px; }
 
 .home { width: 170px; }
